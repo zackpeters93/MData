@@ -27,6 +27,10 @@ export class JobEditComponent implements OnInit {
       );
   }
 
+  onSubmit() {
+    console.log(this.jobForm);
+  }
+
   private initForm() {
 
     let jobNameObj = '';

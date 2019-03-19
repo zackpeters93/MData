@@ -21,8 +21,4 @@ export class JobListComponent implements OnInit {
     this.jobs = this.jobService.getJobs();
   }
 
-  onNewJob() {
-    this.router.navigate(['new'], {relativeTo: this.route});
-  }
-
 }

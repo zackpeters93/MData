@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,6 +14,11 @@ import { JobItemComponent } from './jobs/job-list/job-item/job-item.component';
 import { JobDetailComponent } from './jobs/job-detail/job-detail.component';
 import { JobEditComponent } from './jobs/job-edit/job-edit.component';
 import { JobStartComponent } from './jobs/job-start/job-start.component';
+import { DropdownDirective } from './shared/dropdown.directive';
+import { FileExplorerComponent } from './jobs/file-explorer/file-explorer.component';
+import { NewFolderDialogComponent } from './modals/new-folder-dialog/new-folder-dialog.component';
+import { RenameDialogComponent } from './modals/rename-dialog/rename-dialog.component';
+
 
 @NgModule({
   declarations: [
@@ -23,12 +30,19 @@ import { JobStartComponent } from './jobs/job-start/job-start.component';
     JobItemComponent,
     JobDetailComponent,
     JobEditComponent,
-    JobStartComponent
+    JobStartComponent,
+    DropdownDirective,
+    FileExplorerComponent,
+    NewFolderDialogComponent,
+    RenameDialogComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AngularFontAwesomeModule
+    AngularFontAwesomeModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

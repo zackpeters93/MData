@@ -1,23 +1,24 @@
 <div class="row">
-  <div class="col-xs-12">
+  <div class="col-md-12">
     <h1>{{ job.jobName }}</h1>
   </div>
 </div>
 <div class="row">
-  <div class="col-xs-12">
-    <div class="btn-group" appDropdown>
+  <div class="col-md-12">
+    <div class="btn-group" appDropdown #r="appDropdown">
       <button type="button" class="btn btn-primary dropdown-toggle">
         Manage Job <span class="caret"></span>
       </button>
-      <ul class="dropdown-menu">
-        <li><a style="cursor: pointer;" (click)="onEditJob()">Edit Job</a></li>
-        <li><a style="cursor: pointer;">Delete Job</a></li>
+      <ul class="dropdown-menu" [ngClass]="{'show':r.isOpen}">
+        <li><a style="cursor: pointer;" (click)="onEditJob()">&nbsp;Edit Job</a></li>
+        <li><a style="cursor: pointer;">&nbsp;Delete Job</a></li>
       </ul>
     </div>
   </div>
 </div>
+<br>
 <div class="row">
-  <div class="col-xs-12">
-    {{ job.jobFolder }}
+  <div class="col-md-12">
+    <app-file-explorer></app-file-explorer>
   </div>
 </div>

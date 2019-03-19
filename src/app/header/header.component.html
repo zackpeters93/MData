@@ -21,17 +21,17 @@
             <fa name="cog" animation="spin"></fa>&nbsp;Admin
           </a>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle btn text-white btn-outline-light" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            username
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">My Settings</a>
-            <a class="dropdown-item" href="#">My Password</a>
+        <div class="btn-group" appDropdown #r="appDropdown">
+          <button type="button" class="btn btn-primary text-white btn-outline-light dropdown-toggle">
+            username <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" [ngClass]="{'show':r.isOpen}">
+            <li><a style="cursor: pointer;">&nbsp;My Settings</a></li>
+            <li><a style="cursor: pointer;">&nbsp;My Password</a></li>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Logout</a>
-          </div>
-        </li>
+            <li><a style="cursor: pointer;">&nbsp;Logout</a></li>
+          </ul>
+        </div>
       </ul>
     </div>
   </nav>
