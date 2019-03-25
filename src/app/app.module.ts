@@ -3,6 +3,9 @@ import { NgModule } from '@angular/core';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,9 +18,8 @@ import { JobDetailComponent } from './jobs/job-detail/job-detail.component';
 import { JobEditComponent } from './jobs/job-edit/job-edit.component';
 import { JobStartComponent } from './jobs/job-start/job-start.component';
 import { DropdownDirective } from './shared/dropdown.directive';
-import { FileExplorerComponent } from './jobs/file-explorer/file-explorer.component';
-import { NewFolderDialogComponent } from './modals/new-folder-dialog/new-folder-dialog.component';
-import { RenameDialogComponent } from './modals/rename-dialog/rename-dialog.component';
+
+
 
 
 @NgModule({
@@ -31,10 +33,7 @@ import { RenameDialogComponent } from './modals/rename-dialog/rename-dialog.comp
     JobDetailComponent,
     JobEditComponent,
     JobStartComponent,
-    DropdownDirective,
-    FileExplorerComponent,
-    NewFolderDialogComponent,
-    RenameDialogComponent
+    DropdownDirective
   ],
   imports: [
     BrowserModule,
@@ -42,7 +41,9 @@ import { RenameDialogComponent } from './modals/rename-dialog/rename-dialog.comp
     AngularFontAwesomeModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireDatabaseModule
   ],
   providers: [],
   bootstrap: [AppComponent]
