@@ -18,6 +18,8 @@ import { JobDetailComponent } from './jobs/job-detail/job-detail.component';
 import { JobEditComponent } from './jobs/job-edit/job-edit.component';
 import { JobStartComponent } from './jobs/job-start/job-start.component';
 import { DropdownDirective } from './shared/dropdown.directive';
+import { DataListComponent } from './jobs/job-detail/data-list/data-list.component';
+import { DataItemComponent } from './jobs/job-detail/data-list/data-item/data-item.component';
 
 
 
@@ -33,7 +35,9 @@ import { DropdownDirective } from './shared/dropdown.directive';
     JobDetailComponent,
     JobEditComponent,
     JobStartComponent,
-    DropdownDirective
+    DropdownDirective,
+    DataListComponent,
+    DataItemComponent
   ],
   imports: [
     BrowserModule,

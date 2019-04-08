@@ -1,0 +1,12 @@
+<div class="card">
+  <div class="card-header bg-secondary text-white">
+    Data Related Attachments
+  </div>
+  <div class="card-body">
+    <div class="row">
+      <div class="col-md-12">
+        <app-data-item *ngFor="let dataEl of datas; let i = index" [data]="dataEl" [index]="i"></app-data-item>
+      </div>
+    </div>
+  </div>
+</div>
