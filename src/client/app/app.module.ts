@@ -3,9 +3,7 @@ import { NgModule } from '@angular/core';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { environment } from 'src/environments/environment';
-import { AngularFireModule } from '@angular/fire';
-import { AngularFireDatabaseModule } from '@angular/fire/database';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -20,6 +18,7 @@ import { JobStartComponent } from './jobs/job-start/job-start.component';
 import { DropdownDirective } from './shared/dropdown.directive';
 import { DataListComponent } from './jobs/job-detail/data-list/data-list.component';
 import { DataItemComponent } from './jobs/job-detail/data-list/data-item/data-item.component';
+
 
 
 
@@ -45,9 +44,8 @@ import { DataItemComponent } from './jobs/job-detail/data-list/data-item/data-it
     AngularFontAwesomeModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule,
-    AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFireDatabaseModule
+    HttpClientModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

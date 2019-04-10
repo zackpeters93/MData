@@ -8,8 +8,8 @@ import { Data } from "./data.model";
 export class DataService {
 
   private datas: Data[] = [
-    new Data(1, 'file 1'),
-    new Data(2, 'file 2')
+    new Data(1, 'http://www.mtcinternal.net/MTC_Downloads/100 - PT Loma_86_2011/ptloma8611-1Rdat4.zip'),
+    new Data(2, 'http://www.mtcinternal.net/MTC_Downloads/100 - PT Loma_86_2011/Tk 86 2011 Rpt Final.pdf')
   ];
 
   constructor() { }
